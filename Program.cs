@@ -37,3 +37,9 @@ app.MapRazorPages()
    .WithStaticAssets();
 
 app.Run();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    SeedData.Initialize(services);
+}

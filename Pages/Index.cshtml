@@ -1,10 +1,37 @@
 ﻿@page
-@model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Voces de Jalisco";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="container mt-4">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">🎺 Voces de Jalisco 🎶</h1>
+        <p class="lead">Welcome to the official site of our Mariachi band! Explore our talented members, pricing, and how to book us for your next event.</p>
+        <a class="btn btn-primary btn-lg" href="/Contacts/Create">Hire Us</a>
+    </div>
+
+    <hr />
+
+    <h2>Meet the Band</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="/images/member1.jpg" class="card-img-top" alt="Member Photo">
+                <div class="card-body">
+                    <h5 class="card-title">Our Members</h5>
+                    <p class="card-text">Get to know each talented individual who brings our music to life.</p>
+                    <a href="/Members" class="btn btn-outline-primary">View Members</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="/images/pricing.jpg" class="card-img-top" alt="Pricing">
+                <div class="card-body">
+                    <h5 class="card-title">Pricing</h5>
+                    <p class="card-text">View our performance packages and pricing options.</p>
+                    <a href="/Pricings" class="btn btn-outline-primary">View Pricing</a>
+                </div>
+            </div>
+        </div>

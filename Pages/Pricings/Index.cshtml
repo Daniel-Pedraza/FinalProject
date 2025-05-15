@@ -1,0 +1,37 @@
+@page
+@model FinalProject.Pages.Pricings.IndexModel
+@{
+    ViewData["Title"] = "Pricing List";
+}
+
+<h2>Pricing Packages</h2>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Add New Pricing</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.PricingList)
+    {
+        <tr>
+            <td>@item.Description</td>
+            <td>@item.Location</td>
+            <td>@item.Price.ToString("C")</td>
+            <td>
+                <a asp-page="Details" asp-route-id="@item.PricingID">Details</a> |
+                <a asp-page="Edit" asp-route-id="@item.PricingID">Edit</a> |
+                <a asp-page="Delete" asp-route-id="@item.PricingID">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
